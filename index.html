@@ -1,13 +1,33 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="ja">
 <head>
+<meta charset="UTF-8">
 <title>Show RPM!!</title>
 <link rel="stylesheet" href="./css/animation.css">
+<script type="text/javascript">
+  function turn() {
+    var textBox = document.getElementById("rpmBox").value;
+    var circle = document.getElementById("load");
+
+    circle.style.animation = "spin " + textBox +"s linear infinite";
+  }
+</script>
 </head>
 <body>
 
-<h1>画像を回転させる</h1>
-<div class="load"></div>
+<div class="show">
 
+<h1>正方形を回転させる</h1>
+<p id="load"></p>
+
+<form>
+<p>希望の速度を入力してください</p>
+<input type="text" id="rpmBox">/rpm<br>
+<input type="button" id="btn" value="Show!!" onclick="turn()">
+</form>
+
+</div>
 </body>
 </html>
 
