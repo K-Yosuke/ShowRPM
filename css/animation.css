@@ -11,7 +11,7 @@ background: #1aa;
     -moz-animation: spin 0s linear infinite;
     -ms-animation: spin 0s linear infinite;
     -o-animation: spin 0s linear infinite;
-    animation: spin 2s linear infinite;
+    animation: spin 0s linear infinite;
 }
 
 @-webkit-keyframes spin {
