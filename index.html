@@ -6,11 +6,20 @@
 <title>Show RPM!!</title>
 <link rel="stylesheet" href="./css/animation.css">
 <script type="text/javascript">
-  function turn() {
+  function turnRpm() {
+    var textBox = document.getElementById("rpmBox").value;
+    var rpm = 60 / textBox;
+    var circle = document.getElementById("load");
+
+    circle.style.animation = "spin " + rpm + "s linear infinite";
+    circle.style.webkitAnimation = "spin " + rpm + "s linear infinite";
+  }
+  function turnRps() {
     var textBox = document.getElementById("rpmBox").value;
     var circle = document.getElementById("load");
 
-    circle.style.animation = "spin " + textBox +"s linear infinite";
+    circle.style.animation = "spin " + textBox + "s linear infinite";
+    circle.style.webkitAnimation = "spin " + textBox + "s linear infinite";
   }
 </script>
 </head>
@@ -23,8 +32,8 @@
 
 <form>
 <p>希望の速度を入力してください</p>
-<input type="text" id="rpmBox">/rpm<br>
-<input type="button" id="btn" value="Show!!" onclick="turn()">
+<input type="text" id="rpmBox"><br>
+<input type="button" id="btn" value="RPM" onclick="turnRpm()"><input type="button" id="btn" value="RPS" onclick="turnRps()">
 </form>
 
 </div>
